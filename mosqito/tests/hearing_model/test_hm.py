@@ -19,28 +19,16 @@ import sys
 sys.path.append('../../..')
 
 
-def test_hm_sw(fs, duration, db_spl, sin_freq):
+def test_hm_sw():
     """ Function that serves as a test and creates a sine wave in order to be processed by the hearing model
     "comp_loudness.py".
 
-    Parameters
-    ----------
-    fs: int
-        'Hz', sampling frequency.
-
-    duration: float
-        'Hz', sampling frequency.
-
-    db_spl: float
-        Sound pressure level (dB SPL).
-
-    sin_freq: float
-        'Hz', sampling frequency.
-
-    Returns
-    -------
-
     """
+    fs = 48000
+    duration = 2
+    db_spl = 60
+    sin_freq = 1000
+
     # "Peak" value in Pascals (amplitude)
     p_ref = 2e-5
 
@@ -105,12 +93,6 @@ def test_hm_ls():
     """ Function that serves as a test and loads a signal in order to be processed by the hearing model
     "comp_loudness.py".
 
-    Parameters
-    ----------
-
-    Returns
-    -------
-
     """
     # Gets the PATH of the file that its going to be loaded
     wav_file = {"data_file": r"D:\PycharmProjects\tonality_ecma\mosqito\validations\loudness_zwicker\data\ISO_532-1"
@@ -137,12 +119,7 @@ if __name__ == '__main__':
 
     if case == 1:
         # For loudness calculation the only valid option for the sine wave is 48 kHz
-        fs = 48000
-
-        duration = float(input('\nDuration of the signal [s]:'))
-        db_spl = float(input('\nSound pressure level of the signal [dB SPL]:'))
-        sin_freq = float(input('\nFrequency of the signal [Hz]:'))
-        test_hm_sw(fs, duration, db_spl, sin_freq)
+        test_hm_sw()
 
     elif case == 2:
         test_hm_ls()
