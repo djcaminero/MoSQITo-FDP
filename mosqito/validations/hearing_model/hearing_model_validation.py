@@ -203,27 +203,27 @@ def hearing_model_validation():
     plt.figure(figsize=(10, 5))
     # The lower threshold of hearing is not represented due to the limit that puts the standard by applicating
     # the threshold in quiet
-    # plt.semilogx(frequencies, spl_array_0_phons, 'g:', label='0 phons - equal loudness contour')
-    plt.semilogx(frequencies, spl_array_20_phons, 'b:', label='20 phons - equal loudness contour')
-    plt.semilogx(frequencies, spl_array_40_phons, 'g:', label='40 phons - equal loudness contour')
-    plt.semilogx(frequencies, spl_array_60_phons, 'r:', label='60 phons - equal loudness contour')
-    plt.semilogx(frequencies, spl_array_80_phons, 'c:', label='80 phons - equal loudness contour')
+    # plt.semilogx(frequencies, spl_array_0_phons, 'g:', label='0 fonios - línea isófona ISO 226:2003')
+    plt.semilogx(frequencies, spl_array_20_phons, 'b:', label='20 fonios - línea isófona ISO 226:2003')
+    plt.semilogx(frequencies, spl_array_40_phons, 'g:', label='40 fonios - línea isófona ISO 226:2003')
+    plt.semilogx(frequencies, spl_array_60_phons, 'r:', label='60 fonios - línea isófona ISO 226:2003')
+    plt.semilogx(frequencies, spl_array_80_phons, 'c:', label='80 fonios - línea isófona ISO 226:2003')
 
-    plt.semilogx(freq_array, uncorrected_phon_array[0, :], 'b', label='20 phons - uncorrected loudness')
-    plt.semilogx(freq_array, uncorrected_phon_array[1, :], 'g', label='40 phons - uncorrected loudness')
-    plt.semilogx(freq_array, uncorrected_phon_array[2, :], 'r', label='60 phons - uncorrected loudness')
-    plt.semilogx(freq_array, uncorrected_phon_array[3, :], 'c', label='80 phons - uncorrected loudness')
+    plt.semilogx(freq_array, uncorrected_phon_array[0, :], 'b', label='20 fonios - línea isófona sin corregir')
+    plt.semilogx(freq_array, uncorrected_phon_array[1, :], 'g', label='40 fonios - línea isófona sin corregir')
+    plt.semilogx(freq_array, uncorrected_phon_array[2, :], 'r', label='60 fonios - línea isófona sin corregir')
+    plt.semilogx(freq_array, uncorrected_phon_array[3, :], 'c', label='80 fonios - línea isófona sin corregir')
 
     # Legend created following the guidelines from:
     #   https://stackoverflow.com/questions/4700614/how-to-put-the-legend-out-of-the-plot
     plt.legend(bbox_to_anchor=(1.04, 0.5), borderaxespad=0, loc='center left', ncol=1)
-    plt.subplots_adjust(right=0.65)
+    plt.subplots_adjust(right=0.60)
 
     plt.xlim(left=100, right=10100)
     plt.ylim(bottom=0, top=120)
-    plt.ylabel('Sound pressure level [dB SPL]')
-    plt.xlabel('Frequency [Hz]')
-    plt.title('Loudness contours - Equal Loudness Contours Vs. Uncorrected Values')
+    plt.ylabel('Nivel de presión sonora [dB SPL]')
+    plt.xlabel('Frecuencia [Hz]')
+    plt.title('Contornos de igual sonoridad - ISO 226:2003 Vs. Contornos sin corregir')
     plt.grid(which='both', linestyle='-', color='grey')
     plt.xticks(
         [100, 200, 500, 1000, 2000, 5000, 10000],
@@ -235,27 +235,27 @@ def hearing_model_validation():
     plt.figure(figsize=(10, 5))
     # The lower threshold of hearing is not represented due to the limit that puts the standard by applicating
     # the threshold in quiet
-    # plt.semilogx(frequencies, spl_array_0_phons, 'g:', label='0 phons - equal loudness contour')
-    plt.semilogx(frequencies, spl_array_20_phons, 'b:', label='20 phons - equal loudness contour')
-    plt.semilogx(frequencies, spl_array_40_phons, 'g:', label='40 phons - equal loudness contour')
-    plt.semilogx(frequencies, spl_array_60_phons, 'r:', label='60 phons - equal loudness contour')
-    plt.semilogx(frequencies, spl_array_80_phons, 'c:', label='80 phons - equal loudness contour')
+    # plt.semilogx(frequencies, spl_array_0_phons, 'g:', label='0 fonios - línea isófona ISO 226:2003')
+    plt.semilogx(frequencies, spl_array_20_phons, 'b:', label='20 fonios - línea isófona ISO 226:2003')
+    plt.semilogx(frequencies, spl_array_40_phons, 'g:', label='40 fonios - línea isófona ISO 226:2003')
+    plt.semilogx(frequencies, spl_array_60_phons, 'r:', label='60 fonios - línea isófona ISO 226:2003')
+    plt.semilogx(frequencies, spl_array_80_phons, 'c:', label='80 fonios - línea isófona ISO 226:2003')
 
-    plt.semilogx(freq_array, corrected_phon_array[0, :], 'b', label='20 phons - corrected loudness')
-    plt.semilogx(freq_array, corrected_phon_array[1, :], 'g', label='40 phons - corrected loudness')
-    plt.semilogx(freq_array, corrected_phon_array[2, :], 'r', label='60 phons - corrected loudness')
-    plt.semilogx(freq_array, corrected_phon_array[3, :], 'c', label='80 phons - corrected loudness')
+    plt.semilogx(freq_array, corrected_phon_array[0, :], 'b', label='20 fonios - línea isófona corregida')
+    plt.semilogx(freq_array, corrected_phon_array[1, :], 'g', label='40 fonios - línea isófona corregida')
+    plt.semilogx(freq_array, corrected_phon_array[2, :], 'r', label='60 fonios - línea isófona corregida')
+    plt.semilogx(freq_array, corrected_phon_array[3, :], 'c', label='80 fonios - línea isófona corregida')
 
     # Legend created following the guidelines from:
     #   https://stackoverflow.com/questions/4700614/how-to-put-the-legend-out-of-the-plot
     plt.legend(bbox_to_anchor=(1.04, 0.5), borderaxespad=0, loc='center left', ncol=1)
-    plt.subplots_adjust(right=0.65)
+    plt.subplots_adjust(right=0.60)
 
     plt.xlim(left=100, right=10100)
     plt.ylim(bottom=0, top=120)
-    plt.ylabel('Sound pressure level [dB SPL]')
-    plt.xlabel('Frequency [Hz]')
-    plt.title('Loudness contours - Equal Loudness Contours Vs. Corrected Values')
+    plt.ylabel('Nivel de presión sonora [dB SPL]')
+    plt.xlabel('Frecuencia [Hz]')
+    plt.title('Contornos de igual sonoridad - ISO 226:2003 Vs. Contornos corregidos')
     plt.grid(which='both', linestyle='-', color='grey')
     plt.xticks(
         [100, 200, 500, 1000, 2000, 5000, 10000],
@@ -265,26 +265,26 @@ def hearing_model_validation():
 
     """ CORRECTED VALUES Vs. UNCORRECTED VALUES"""
     plt.figure(figsize=(10, 5))
-    plt.semilogx(freq_array, uncorrected_phon_array[0, :], 'b:', label='20 phons - uncorrected loudness')
-    plt.semilogx(freq_array, uncorrected_phon_array[1, :], 'g:', label='40 phons - uncorrected loudness')
-    plt.semilogx(freq_array, uncorrected_phon_array[2, :], 'r:', label='60 phons - uncorrected loudness')
-    plt.semilogx(freq_array, uncorrected_phon_array[3, :], 'c:', label='80 phons - uncorrected loudness')
+    plt.semilogx(freq_array, uncorrected_phon_array[0, :], 'b:', label='20 fonios - línea isófona sin corregir')
+    plt.semilogx(freq_array, uncorrected_phon_array[1, :], 'g:', label='40 fonios - línea isófona sin corregir')
+    plt.semilogx(freq_array, uncorrected_phon_array[2, :], 'r:', label='60 fonios - línea isófona sin corregir')
+    plt.semilogx(freq_array, uncorrected_phon_array[3, :], 'c:', label='80 fonios - línea isófona sin corregir')
 
-    plt.semilogx(freq_array, corrected_phon_array[0, :], 'b', label='20 phons - corrected loudness')
-    plt.semilogx(freq_array, corrected_phon_array[1, :], 'g', label='40 phons - corrected loudness')
-    plt.semilogx(freq_array, corrected_phon_array[2, :], 'r', label='60 phons - corrected loudness')
-    plt.semilogx(freq_array, corrected_phon_array[3, :], 'c', label='80 phons - corrected loudness')
+    plt.semilogx(freq_array, corrected_phon_array[0, :], 'b', label='20 fonios - línea isófona corregida')
+    plt.semilogx(freq_array, corrected_phon_array[1, :], 'g', label='40 fonios - línea isófona corregida')
+    plt.semilogx(freq_array, corrected_phon_array[2, :], 'r', label='60 fonios - línea isófona corregida')
+    plt.semilogx(freq_array, corrected_phon_array[3, :], 'c', label='80 fonios - línea isófona corregida')
 
     # Legend created following the guidelines from:
     #   https://stackoverflow.com/questions/4700614/how-to-put-the-legend-out-of-the-plot
     plt.legend(bbox_to_anchor=(1.04, 0.5), borderaxespad=0, loc='center left', ncol=1)
-    plt.subplots_adjust(right=0.65)
+    plt.subplots_adjust(right=0.60)
 
     plt.xlim(left=100, right=10100)
     plt.ylim(bottom=0, top=120)
-    plt.ylabel('Sound pressure level [dB SPL]')
-    plt.xlabel('Frequency [Hz]')
-    plt.title('Loudness contours - Uncorrected Values Vs. Corrected Values')
+    plt.ylabel('Nivel de presión sonora [dB SPL]')
+    plt.xlabel('Frecuencia [Hz]')
+    plt.title('Contornos de igual sonoridad - Contornos sin corregir Vs. Contornos corregidos')
     plt.grid(which='both', linestyle='-', color='grey')
     plt.xticks(
         [100, 200, 500, 1000, 2000, 5000, 10000],
