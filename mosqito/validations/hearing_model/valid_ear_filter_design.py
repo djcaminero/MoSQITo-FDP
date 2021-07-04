@@ -1,4 +1,7 @@
 # -*- coding: utf-8 -*-
+"""
+@author: Daniel Jiménez-Caminero Costa and modifications by "martin_g" of Eomys
+"""
 
 from scipy import signal
 from numpy import log10, abs as np_abs, maximum as np_maximum
@@ -28,14 +31,14 @@ def valid_ear_filter_design():
 
     # Legend created following the guidelines from:
     #   https://stackoverflow.com/questions/4700614/how-to-put-the-legend-out-of-the-plot
-    plt.legend(['F. Response (sos filter)'], bbox_to_anchor=(1.04, 0.5), borderaxespad=0, loc='center left', ncol=1)
+    plt.legend(['Curva del filtro auditivo'], bbox_to_anchor=(1.04, 0.5), borderaxespad=0, loc='center left', ncol=1)
     plt.subplots_adjust(right=0.75)
 
     plt.xlim(20, 20000)
     plt.ylim(-25, 10)
-    plt.xlabel('Frequency [Hz]')
-    plt.ylabel('Level [dB]')
-    plt.title('Frequency Response of Outer and Middle Ear Filter')
+    plt.xlabel('Frecuencia [Hz]')
+    plt.ylabel('Nivel de presión sonora [dB SPL]')
+    plt.title('Respuesta en frecuencia del oído externo y medio/interno')
     plt.grid(which='both', linestyle='-', color='grey')
     plt.xticks([20, 50, 100, 200, 500, 1000, 2000, 5000, 10000, 20000],
                ["20", "50", "100", "200", "500", "1K", "2K", "5K", "10K", "20K"])
