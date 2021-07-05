@@ -64,7 +64,7 @@ def afb_coefficients(fs, filter_order_k, centre_freq, d_coefficients):
         if m == 0:
             am_coefficient = 1.0
         else:
-            binomial_coef_2 = float(sp.special.comb(filter_order_k, m, exact=True))
+            binomial_coef_2 = sp.special.comb(filter_order_k, m, exact=False)
 
             if (m % 2) == 0:
                 am_coefficient = (d_coefficients ** m) * binomial_coef_2
