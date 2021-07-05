@@ -4,6 +4,7 @@
 """
 
 import numpy as np
+import matplotlib.pyplot as plt
 import scipy as sp
 from scipy.signal import welch
 
@@ -34,12 +35,12 @@ def comp_loudness(signal, validation=False):
 
     Parameters
     ----------
-    validation: boolean
-        Default value is set to 'False'. It is used to mark whether complete validation is done or not.
-
     signal: numpy.array
         'Pa', time signal values. It can be, stereo (2 dimensions) or mono (1 dimension).The sampling frequency of the
         signal must be 48000 Hz.
+
+    validation: boolean
+        Default value is set to 'False'. It is used to mark whether complete validation is done or not.
 
     Returns
     -------
@@ -296,12 +297,11 @@ def comp_loudness(signal, validation=False):
                     plt.plot(block_time, l_block)
                     plt.xlim(left=0, right=block_x_limit)
                     plt.ylim(bottom=0)
-                    plt.xlabel('Time [s]')
-                    plt.ylabel('Amplitude [Pa]')
-                    plt.title('Rectified signal, block number 10, 1 kHz band')
+                    plt.xlabel('Tiempo [s]')
+                    plt.ylabel('Amplitud [Pa]')
+                    plt.title('Señal rectificada, banda de 1 kHz')
                     plt.grid(which='both', linestyle='-', color='grey')
-                    plt.show()
-                    """
+                    plt.show()"""
 
                 """ NON-LINEARITY (5.1.7)
 
