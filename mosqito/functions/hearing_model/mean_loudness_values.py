@@ -57,6 +57,6 @@ def mean_loudness_values():
         mean_loudness_value = np.round(np.mean(t_l), 6)
         mean_loudness_array[i] = mean_loudness_value
 
-        print('Input ' + str(phon_limit_array[i]) + 'dB, Output ' + str(mean_loudness_value) + ' sones')
+        print('Input ' + str(phon_limit_array[i]) + 'dB, Expected output , Output ' + str() + str(mean_loudness_value) + ' sones')
 
     return mean_loudness_array
