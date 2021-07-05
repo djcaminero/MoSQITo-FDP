@@ -54,7 +54,7 @@ def afb_ppal_parameters(fs, band_number, filter_order_k):
     # Binomial coefficient
     n_binomial = (2.0 * filter_order_k) - 2.0
     k_binomial = filter_order_k - 1.0
-    binomial_coef_1 = float(sp.special.comb(int(n_binomial), int(k_binomial), exact=True))
+    binomial_coef_1 = sp.special.comb(int(n_binomial), int(k_binomial), exact=False)
 
     # Critical band rate scale
     z = (band_number + 1) * z_step_size
