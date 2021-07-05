@@ -74,7 +74,7 @@ def reassignment_loudness(loudness_original_value, mean_loudness_array):
         new_loudness_range = corrected_upper_limit - corrected_lower_limit
 
         # Calculation of the new loudness value according to the new/old ranges
-        corrected_loudness = ((new_loudness_range * (
-                loudness_original_value - uncorrected_upper_limit)) / old_loudness_range) + corrected_upper_limit
+        corrected_loudness = (
+(new_loudness_range * (loudness_original_value - uncorrected_upper_limit)) / old_loudness_range) + corrected_upper_limit
 
     return corrected_loudness
